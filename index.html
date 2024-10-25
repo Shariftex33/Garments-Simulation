@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Garment Simulation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+  <h1>3D Garment Simulation</h1>
+
+  <div class="controls">
+    <label for="modelInput">Select Model (.obj, .glb):</label>
+    <input type="file" id="modelInput" accept=".obj, .glb, .gltf">
+    
+    <label for="fabricInput">Select Fabric Image:</label>
+    <input type="file" id="fabricInput" accept="image/*">
+    
+    <button id="simulateBtn">Simulate</button>
+  </div>
+  
+  <div id="canvasContainer"></div>
+
+  <!-- Load Three.js core -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- Load OBJ Loader -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
+  <!-- Load GLTF Loader -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+  <!-- Load Orbit Controls -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <!-- Your custom script -->
+  <script src="script.js"></script>
+</body>
+</html>
